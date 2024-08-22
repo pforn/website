@@ -12,7 +12,6 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <Preloader load={load} />
       <App />
     </BrowserRouter>
   </StrictMode>

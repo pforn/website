@@ -40,15 +40,18 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="App" id={load ? "no-scroll" : "scroll"}>
       <PreLoader load={load} />
       {!load && (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
+        <div className="fade-in">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
       )}
     </div>
   );
