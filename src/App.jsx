@@ -5,15 +5,20 @@
  */
 
 // React imports
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // React Router imports
-import { Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 // Component imports
-import LandingPage from "./pages/LandingPage";
-import Resume from "./pages/Resume";
-import Projects from "./pages/Projects";
-import Blog from "./pages/Blog";
+import Home from "./components/Home/Home";
+import Resume from "./components/Resume/Resume";
+import Projects from "./components/Projects/Projects";
+import Blog from "./components/Blog/Blog";
 
 // CSS imports
 import "./App.css";
@@ -29,7 +34,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
