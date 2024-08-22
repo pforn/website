@@ -1,12 +1,42 @@
+/**
+ * Main component for the application.
+ *
+ * @returns {JSX.Element} The rendered App component.
+ */
+
+// React imports
 import React, { useState } from "react";
+
+// React Router imports
+import { Routes, Route } from "react-router-dom";
+// Component imports
+import LandingPage from "./pages/LandingPage";
+import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+
+// CSS imports
 import "./App.css";
+
+// Image imports
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
+// App component
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+    </div>
+
+    /*
     <>
       <section className="section">
         <div className="container">
@@ -46,6 +76,7 @@ function App() {
         </div>
       </section>
     </>
+    */
   );
 }
 
