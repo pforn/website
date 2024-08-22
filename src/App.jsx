@@ -36,7 +36,7 @@ function App() {
     // Simulate a loading process
     setTimeout(() => {
       setLoad(false);
-    }, 3000); // Adjust the timeout as needed
+    }, 1500); // Adjust the timeout as needed
   }, []);
 
   return (
