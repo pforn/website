@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+eslint.config.js
+setupTests.js
+vite.config.js
+vitest.config.js
+Dockerfile
