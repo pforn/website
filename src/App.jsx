@@ -16,6 +16,7 @@ import NavBar from "./components/NavBar";
 
 // CSS imports
 import "./App.css";
+import "./style.css";
 
 // App component
 const App = () => {
